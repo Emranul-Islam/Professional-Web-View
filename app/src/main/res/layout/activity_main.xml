@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <!--        <ProgressBar-->
+    <!--    android:id="@+id/progressBar"-->
+    <!--    style="?android:attr/progressBarStyleHorizontal"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="8dp"-->
+    <!--    android:layout_marginTop="-2dp"-->
+    <!--    android:progress="20"-->
+    <!--    android:visibility="gone" />-->
+
+
+
+    <WebView
+        android:id="@+id/myWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="InvalidId" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/number_progress_bar"
+        style="@style/NumberProgressBar_Passing_Green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:progress_unreached_bar_height="1.75dp"
+        app:progress_reached_bar_height="2.5dp"
+        app:progress_text_size="20sp"
+        />
+
+
+        <com.luseen.spacenavigation.SpaceNavigationView
+            android:id="@+id/myNavID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:centre_button_color="@color/colorWhite"
+            app:centre_button_icon="@drawable/ic_home"
+            app:inactive_item_color="@color/colorWhite"
+            app:space_background_color="@color/colorPrimary"
+            app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+            app:space_item_icon_size="@dimen/space_item_icon_default_size"
+            app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/noInternetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:src="@drawable/nointernet" />
+
+        <TextView
+            android:id="@+id/noInternetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noInternet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="No Internet"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/noInternetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noInternetText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorPrimary"
+            android:text="Retry"
+            android:textColor="#ffff"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
